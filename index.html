@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ID Card Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>DARKWICK IDs</h1>
+        <div class="id-card-wrapper" id="idCardWrapper">
+            <div class="id-card" id="idCard">
+                <img id="background-image" class="background-image" src="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_161213.png" alt="Background" crossorigin="anonymous">
+                <div class="id-card-content">
+                    <img id="profile-picture" class="profile-picture" src="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/profile-picture.png" alt="Profile Picture" crossorigin="anonymous">
+                    <div class="details">
+                        <p id="name">NAME: SAYURI</p>
+                        <p id="reg-date">REG. DATE: 28/09/2024</p>
+                        <p id="pronouns">PRONOUNS: CLOWN</p>
+                        <p id="house-name">HOUSE NAME: FROSTHEIM</p>
+                        <p id="role">ROLE: MEMBER</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="controls">
+            <label for="profile-picture-input">Profile Picture:</label>
+            <input type="file" id="profile-picture-input" accept="image/*" onchange="loadProfilePicture(event)">
+            <br>
+            <label for="name-input">Name:</label>
+            <input type="text" id="name-input" placeholder="Enter name">
+            <br>
+            <label for="reg-date-input">Reg. Date:</label>
+            <input type="date" id="reg-date-input">
+            <br>
+            <label for="pronouns-input">Pronouns:</label>
+            <input type="text" id="pronouns-input" placeholder="Enter pronouns">
+            <br>
+            <label for="house-name-input">House Name:</label>
+            <input type="text" id="house-name-input" placeholder="Enter house name">
+            <br>
+            <label for="role-input">Role:</label>
+            <input type="text" id="role-input" placeholder="Enter role">
+            <br>
+            <label for="background">Choose Background:</label>
+            <select id="background" onchange="changeBackground()">
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_161213.png">FROSTHEIM</option>
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_161240.png">VAGASTROM</option>
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_161317.png">JABBERWOCK</option>
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_161348.png">HOTARUBI</option>
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_194232.png">SINOSTRA</option>
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_194312.png">OBSCUARY</option>
+                <option value="https://raw.githubusercontent.com/hoshibamitaiga/idimages/main/20240930_194207.png">MORTKRANKEN</option>
+            </select>
+            <br>
+            <button onclick="generateCard()">Generate</button>
+            <button onclick="downloadCard()">Download</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

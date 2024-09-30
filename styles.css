@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;  /* Use the Google Font */
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+.id-card-wrapper {
+    display: inline-block;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.id-card {
+    width: 400px;  /* Reduced width */
+    height: 250px;  /* Reduced height */
+    position: relative;
+    border-radius: 20px;  /* Rounded edges */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    object-fit: cover;
+    opacity: 1; /* Ensure background is visible */
+}
+
+.id-card-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #000;
+}
+
+.profile-picture {
+    width: 135px; /* Adjusted size */
+    height: 165px; /* Adjusted size */
+    border: 0px solid #fff;
+    margin-bottom: 10px;
+    z-index: 3;
+    position: absolute;
+    top: 27px; /* Adjusted to move down */
+    left: 8px; /* Adjust to move horizontally */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added crisp shadow */
+}
+
+.details {
+    position: absolute;
+    top: 59px; /* Fixed position */
+    left: 167px; /* Fixed position */
+    width: calc(100% - 140px); /* Adjust width to fit within card */
+    text-align: left;
+    font-size: 0.95em; /* Smaller font size */
+    line-height: 1.8; /* Added line spacing */
+}
+
+.controls {
+    margin-top: 20px;
+}
+
+.controls label {
+    font-weight: bold;
+}
+
+.controls input, .controls select {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+#name, #reg-date, #pronouns, #house-name, #role {
+    margin: 3px 0;
+    font-size: 1em; /* Ensure text is appropriately sized */
+    text-transform: uppercase; /* Ensure text is uppercase */
+}
