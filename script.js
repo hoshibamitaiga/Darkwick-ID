@@ -34,13 +34,12 @@ function generateCard() {
 
 // Download Card
 function downloadCard() {
-    html2canvas(document.getElementById('idCardWrapper'), {
-        useCORS: true,
-        backgroundColor: null
-    }).then(canvas => {
-        const link = document.createElement('a');
-        link.download = 'id-card.png';
-        link.href = canvas.toDataURL('image/png');
-        link.click();
-    });
+  const idCard = document.getElementById('idCard');
+  
+  html2canvas(idCard, { useCORS: true, foreignObjectRendering: true }).then(canvas => {
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = 'id-card.png';
+    link.click();
+  });
 }
