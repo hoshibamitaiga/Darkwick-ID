@@ -35,7 +35,7 @@ function generateCard() {
 // Download Card
 function downloadCard() {
     html2canvas(document.getElementById('idCardWrapper'), {
-        useCORS: true,foreignObjectRendering: true,
+        useCORS: true,
         backgroundColor: null
     }).then(canvas => {
         const link = document.createElement('a');
