@@ -53,14 +53,14 @@ body {
 }
 
 .profile-picture {
-    width: 135px; /* Adjusted size */
-    height: 165px; /* Adjusted size */
+    width: 133px; /* Adjusted size */
+    height: 161px; /* Adjusted size */
     border: 0px solid #fff;
     margin-bottom: 10px;
     z-index: 3;
     position: absolute;
-    top: 27px; /* Adjusted to move down */
-    left: 8px; /* Adjust to move horizontally */
+    top: 28px; /* Adjusted to move down */
+    left: 9px; /* Adjust to move horizontally */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Added crisp shadow */
 }
 
